@@ -29,9 +29,9 @@ const HomePage = () => {
     <Loading />
   ) : (
     <div className="container mx-auto px-4 sm:px-8 py-8">
-      <div className="max-w-3xl mx-auto p-6">
-        <div className="lg:flex gap-4">
-          <div className="space-y-4">
+      <div className="max-w-5xl mx-auto p-6">
+        <div className="lg:flex gap-8">
+          <div className="lg:w-2/3 space-y-6">
             {posts?.map((post, i) => (
               <Link to={`/post/${post.$id}`} key={i}>
                 <Card {...post} />
@@ -41,12 +41,12 @@ const HomePage = () => {
           <aside className="lg:w-1/3 flex-shrink-0">
             <div className="bg-white shadow rounded-lg p-6">
               <h3 className="text-xl font-bold mb-4">Recent Posts</h3>
-              <ul className="">
+              <ul className="space-y-2">
                 {posts.map((post, i) => (
                   <li key={i}>
                     <Link
                       to={`/post/${post.$id}`}
-                      className="text-gray-600 hover:text-gray-900 hover:underline"
+                      className="text-gray-600 hover:text-blue-600 hover:underline transition-colors"
                     >
                       {post.title}
                     </Link>
