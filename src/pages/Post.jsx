@@ -31,7 +31,7 @@ const Post = () => {
   return !post ? (
     <Loading />
   ) : (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-16 py-8">
       <div className="max-w-3xl mx-auto sm:px-6 lg:px-8">
         <div className=" py-4">
           <h2 className="text-3xl py-2 font-extrabold text-gray-900">

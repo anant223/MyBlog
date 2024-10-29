@@ -36,7 +36,7 @@ const Header = () => {
   };
   return (
     <header className="bg-white shadow sticky">
-      <div className="container mx-auto px-4 py-6 flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-8 py-8 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Link className="text-2xl font-bold" to={"/"}>
             <h1>MyBlog</h1>

@@ -28,13 +28,13 @@ const HomePage = () => {
   return loading ? (
     <Loading />
   ) : (
-    <div className="bg-gray-100">
-      <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 sm:px-8 py-8">
+      <div className="max-w-3xl mx-auto p-6">
         <div className="lg:flex gap-4">
           <div className="space-y-4">
             {posts?.map((post, i) => (
               <Link to={`/post/${post.$id}`} key={i}>
-                <Card {...post}/>
+                <Card {...post} />
               </Link>
             ))}
           </div>
