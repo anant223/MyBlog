@@ -1,8 +1,8 @@
-# React + Vite
+# Blogging App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Stack :- React, Tailwind CSS, And Appwrite
 
-Currently, two official plugins are available:
+* Developed a feature-rich blogging platform with secure user authentication and role-based
+permissions, incorporating a rich text editor (TinyMCE) for content creation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* This blogging platform uses Appwrite for secure user authentication, blog data storage, and role-based permissions. Appwrite’s Authentication manages secure login, while its Database stores and retrieves user-generated content.
