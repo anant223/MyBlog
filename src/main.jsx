@@ -14,6 +14,7 @@ import Post from "./pages/Post.jsx";
 import AddPost from "./pages/AddPost.jsx"
 import AboutPage from "./pages/AboutPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import AuthVaidation from "./AuthVaidation.jsx";
 
 const appRouter = createBrowserRouter([
   {
@@ -34,19 +35,35 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <LoginPage />,
+        element: (
+          <AuthVaidation authentication={false}>
+            <LoginPage />
+          </AuthVaidation>
+        ),
       },
       {
         path: "/signup",
-        element: <SignupPage />,
+        element: (
+          <AuthVaidation authentication={false}>
+            <SignupPage />
+          </AuthVaidation>
+        ),
       },
       {
         path: "/edit-post/:slug",
-        element: <EditPost />,
+        element: (
+          <AuthVaidation authentication>
+            <EditPost />
+          </AuthVaidation>
+        ),
       },
       {
         path: "/addpost",
-        element: <AddPost />,
+        element: (
+          <AuthVaidation authentication>
+            <AddPost />
+          </AuthVaidation>
+        ),
       },
       {
         path: "/post/:slug",

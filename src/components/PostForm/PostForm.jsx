@@ -46,7 +46,7 @@ const PostFrom = ({ post }) => {
         console.log(userData);
         const dbPost = await dbService.createPost({
           ...data,
-          userid: userData.userData.$id,
+          userid: userData?.userData?.$id,
         });
         // console.log(dbPost)
         if (dbPost) {
@@ -79,20 +79,20 @@ const PostFrom = ({ post }) => {
   // }, [watch, slugTransformation, setValue]);
 
   return (
-    <div className="max-w-3xl mx-auto bg-gray-100 p-8 shadow-md rounded-md">
-      <h2 className="text-2xl font-semibold mb-6 text-gray-900">
+    <div className="max-w-3xl mx-auto sm:bg-gray-100 p-8 shadow-md rounded-md">
+      <h2 className="text-2xl font-semibold mb-6 text-black">
         {post ? "Update Article" : "Add New Article"}
       </h2>
       <form onSubmit={handleSubmit(handlePost)}>
         <div className="mb-4">
           <Input
-            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-gray-400"
             placeholder="Title"
             {...register("title", { required: true })}
           />
         </div>
 
-        <div className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300">
+        <div className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-gray-400">
           <RTE
             label="Content"
             name="content"
@@ -104,7 +104,7 @@ const PostFrom = ({ post }) => {
           <Input
             label="Featured Image"
             type="file"
-            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-gray-400"
             accept="image/png, image/jpg, image/jpeg, image/gif"
             {...register("img", { required: !post })}
           />
@@ -120,16 +120,12 @@ const PostFrom = ({ post }) => {
           <Select
             options={["Active", "Inactive"]}
             label="Status"
-            className="w-full p-3 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400"
             {...register("status", { required: true })}
           />
           <Btn
-            bgColor={
-              post
-                ? "bg-green-500 hover:bg-green-600"
-                : "bg-blue-500 hover:bg-blue-600"
-            }
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200"
+            bgColor="bg-black"
+            className="w-full  text-white py-2 px-4 rounded-md hover:bg-gray-900 transition duration-200"
             name={post ? "Update" : "Submit"}
           />
         </div>

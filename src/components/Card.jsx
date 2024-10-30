@@ -16,7 +16,10 @@ const Card = ({ $id, featuredImage, title, content }) => {
         />
         <div className="p-6">
           <h2 className="text-2xl font-bold mb-2">
-            <Link className="text-gray-900 hover:text-gray-700 hover:underline">
+            <Link
+              to={`/post/${$id}`}
+              className="text-black-900 hover:text-gray-900 hover:underline"
+            >
               {title}
             </Link>
           </h2>
@@ -28,7 +31,7 @@ const Card = ({ $id, featuredImage, title, content }) => {
           <div className="">
             <Link
               to={`/post/${$id}`}
-              className="text-blue-600 hover:text-blue-800 hover:underline"
+              className="text-balck hover:text-gray-400 hover:underline"
             >
               Read More →
             </Link>

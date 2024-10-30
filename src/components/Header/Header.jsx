@@ -39,7 +39,7 @@ const Header = () => {
             {navItems.map((item) => (
               <li
                 key={item.slug}
-                className="text-gray-600 hover:text-blue-600 transition-colors"
+                className="text-black hover:text-gray-600 transition-colors"
               >
                 <Link to={item.slug}>{item.name}</Link>
               </li>
@@ -57,14 +57,14 @@ const Header = () => {
           ) : (
             <>
               <Link
-                className="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="flex items-center px-4 py-2 text-sm font-medium text-white bg-black rounded-md hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-100"
                 to="/addpost"
               >
                 <PenSquareIcon className="mr-2 h-4 w-4" />
                 Write
               </Link>
               <button
-                className="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="flex items-center px-4 py-2 text-sm font-medium text-white bg-black rounded-md hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-100"
                 onClick={handleLogoutClick}
               >
                 <LogOutIcon className="mr-2 h-4 w-4" />

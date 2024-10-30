@@ -72,7 +72,7 @@ const Register = () => {
           <span>{error}</span>
         </div>
         <Btn
-          className="w-full bg-black text-white py-2 rounded hover:bg-indigo-600 transition duration-200"
+          className="w-full bg-black text-white py-2 rounded hover:bg-gray-900 transition duration-200"
           name="Sign Up"
           bgColor="bg-black"
         />
