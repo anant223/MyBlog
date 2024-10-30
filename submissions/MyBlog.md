@@ -11,6 +11,9 @@ permissions, incorporating a rich text editor (TinyMCE) for content creation.
 
 * I was joining Appwrite hackathon, but without friends to form a team or any clear project ideas, I decided to seek inspiration online. As I explored various articles on Medium, I had a lightbulb moment: why not create something medium type of blog system
 
+## Tech Stack
+React, Tailwind CSS, Appwrite, and ReduxToolkit
+
 * https://github.com/anant223/MyBlog
 
 video-link:-
