@@ -1,3 +1,4 @@
+
 ## MyBlog - Blogging App
 
 https://github.com/anant223
@@ -16,4 +17,3 @@ https://github.com/anant223
 
 https://github.com/anant223/MyBlog
 
-<video controls src="20241030-0845-06.5483773.mp4" title="Title"></video>
