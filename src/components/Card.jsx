@@ -3,7 +3,7 @@ import dbService from "../service/dbservice";
 import { Link } from "react-router-dom";
 import Parse from "html-react-parser";
 
-const Card = ({ $id, featuredImage, title, content }) => {
+const Card = ({ $id, featuredImage, title, content, $createdAt }) => {
   return (
     <div className="lg:w-[98%]">
       <div className="bg-white shadow rounded-lg mb-8">
@@ -23,7 +23,10 @@ const Card = ({ $id, featuredImage, title, content }) => {
               {title}
             </Link>
           </h2>
-          <p className="text-gray-600 mb-4">Published on May 28, 2023</p>
+          <p className="text-gray-600 mb-4">
+            Published on{" "}
+            {new Date($createdAt).toDateString()}
+          </p>
 
           <p className="line-clamp-3 overflow-hidden text-gray-700 mb-4">
             {Parse(content)}

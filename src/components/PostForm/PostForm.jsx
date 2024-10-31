@@ -21,22 +21,22 @@ const PostFrom = ({ post }) => {
     });
 
   const handlePost = async (data) => {
-    if (post) {
-      const file = data.img[0] ? await dbService.uploadFile(data.img[0]) : null;
+    // if (post) {
+    //   const file = data.img[0] ? await dbService.uploadFile(data.img[0]) : null;
 
-      if (file) {
-        await dbService.deleteFile(post.featuredImage);
-      }
+    //   if (file) {
+    //     await dbService.deleteFile(post.featuredImage);
+    //   }
 
-      const dbPost = await dbService.updatePost(data.$id, {
-        ...data,
-        featuredImage: file ? file.$id : undefined,
-      });
+    //   const dbPost = await dbService.updatePost(data.$id, {
+    //     ...data,
+    //     featuredImage: file ? file.$id : undefined,
+    //   });
 
-      if (dbPost) {
-        navigate(`/post/${dbPost.$id}`);
-      }
-    } else {
+    //   if (dbPost) {
+    //     navigate(`/post/${dbPost.$id}`);
+    //   }
+    // } else {
       const file = await dbService.uploadFile(data.img[0]);
       if (file) {
         // console.log(userData.userData)
@@ -53,7 +53,7 @@ const PostFrom = ({ post }) => {
           navigate(`/post/${dbPost.$id}`);
         }
       }
-    }
+    // }
   };
   // const slugTransformation = useCallback((value) => {
   //   if (value && typeof value === "string") {
