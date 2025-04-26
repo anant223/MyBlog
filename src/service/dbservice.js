@@ -60,7 +60,6 @@ export class DBService {
   }
 
   async likePost(postId, userId) {
-    console.log(postId, userId);
     try {
       await this.databases.createDocument(
         config.appwriteDatabaseId,
@@ -107,8 +106,8 @@ export class DBService {
         [Query.equal("post_id", postId), Query.equal("user_id", userId)],
         config.appwriteLikeId
       );
-
-      if (searchLikedUser.documents.length > 0) {
+      console.log(searchLikedUser);
+      if (searchLikedUser.documents.length === 1) {
         const user = searchLikedUser.documents[0].$id;
         await this.databases.deleteDocument(
           config.appwriteDatabaseId,

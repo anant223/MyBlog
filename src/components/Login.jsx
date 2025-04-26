@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Input, Btn } from "./index";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { login } from "../slice/authSlice";
 import authService from "../service/authservice";
 
@@ -78,9 +78,9 @@ const Login = () => {
         </form>
         <p className="mt-4 text-center text-sm text-gray-600">
           Don't have an account?{" "}
-          <a href="/signup" className="text-gray-500 hover:underline">
+          <Link to="/signup" className="text-gray-500 hover:underline">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     )
